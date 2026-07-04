@@ -112,10 +112,10 @@ function VideoGrid({
             aria-label={`Instagram videosu ${i + 1} aç`}
           >
             <video
-              src={`${videos[i]}#t=0.1`}
+              src={videos[i]}
               muted
               playsInline
-              preload="metadata"
+              preload="none"
               aria-hidden
             />
             <span className={styles.videoPlay} aria-hidden>
@@ -279,7 +279,7 @@ export default function MafLounge() {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             poster={siteConfig.heroPoster || undefined}
           >
             <source src={siteConfig.heroVideo} type="video/mp4" />
