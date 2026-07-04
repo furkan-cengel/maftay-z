@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand palette — sourced from the MAF menu site for visual consistency */
+  --maf-bg: #050212;
+  --maf-bg-2: #090319;
+  --maf-bg-3: #020105;
+  --maf-text: #f2f1f8;
+  --maf-sub: #a6a0bc;
+  --maf-accent: #b89eff; /* lavender — primary accent */
+  --maf-gold: #e5bf6d; /* warm secondary accent */
+  --maf-purple: #310a64; /* deep brand purple (logo) */
+  --maf-purple-2: #4a2088;
+  --maf-surface: #0f091c;
+  --maf-border: rgba(184, 158, 255, 0.16);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--maf-bg-3);
+  color: var(--maf-text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
 }
